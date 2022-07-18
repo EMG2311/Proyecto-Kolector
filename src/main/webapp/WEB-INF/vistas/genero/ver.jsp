@@ -9,12 +9,11 @@
 
 
 <div class="card">
-  <h5 class="card-header">PeliculaSerie id: ${pelicula.idPelicula}</h5>
+  <h5 class="card-header">Genero id: ${genero.idGenero}</h5>
   <div class="card-body">
-    <h5 class="card-title">${pelicula.titulo}</h5>
-    <p class="card-text">calificacion: <fmt:formatNumber type="number" value="${pelicula.calificacion}" /> </p>   
-     <p class="card-text">Fecha de creacion:<fmt:formatNumber type="date" value="${pelicula.fechaCreacion}" /> </p>
- 	<img src="/peliculas/recuperar-foto-personaje/${pelicula.idPelicula}">
+    <h5 class="card-title">${genero.nombre}</h5>
+    <p class="card-text">Peliculas asociadas<fmt:formatNumber value="${genero.peliculasAsociadas}" /> </p>   
+ 	<img src="/peliculas/recuperar-foto-genero/${genero.idGenero}">
   </div>
 </div>
 

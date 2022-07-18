@@ -10,8 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,15 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import edu.curso.java.demo.Rest.dto.PeliculaSerieDTO;
-import edu.curso.java.demo.Rest.dto.PersonajeDTO;
-import edu.curso.java.demo.Service.GeneroService;
 import edu.curso.java.demo.Service.PeliculaSerieException;
 import edu.curso.java.demo.Service.PeliculaSerieService;
-import edu.curso.java.demo.Service.PersonajeException;
-import edu.curso.java.demo.Service.PersonajeService;
-import edu.curso.java.demo.bo.Genero;
 import edu.curso.java.demo.bo.PeliculaSerie;
-import edu.curso.java.demo.bo.Personaje;
 
 
 @RestController

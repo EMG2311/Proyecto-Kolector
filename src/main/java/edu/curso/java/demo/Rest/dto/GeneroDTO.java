@@ -15,8 +15,8 @@ import edu.curso.java.demo.enumeraciones.tituloGeneroEnumeracion;
 public class GeneroDTO {
 	private Long idGenero;
 	
-
-	private String nombre;
+	@NotBlank
+	private tituloGeneroEnumeracion nombre;
 	private List<PeliculaSerie> peliculasAsociadas = new ArrayList<PeliculaSerie>();
 	
 	
@@ -38,10 +38,10 @@ public class GeneroDTO {
 	public void setIdGenero(Long idGenero) {
 		this.idGenero = idGenero;
 	}
-	public String getNombre() {
+	public tituloGeneroEnumeracion getNombre() {
 		return nombre;
 	}
-	public void setNombre(String nombre) {
+	public void setNombre(tituloGeneroEnumeracion nombre) {
 		this.nombre = nombre;
 	}
 	public List<PeliculaSerie> getPeliculasAsociadas() {

@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import edu.curso.java.demo.bo.PeliculaSerie;
-import edu.curso.java.demo.bo.Personaje;
+
 
 @Repository
 public interface PeliculaSerieRepository extends JpaRepository<PeliculaSerie, Long>{

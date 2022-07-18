@@ -25,11 +25,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import edu.curso.java.demo.Service.GeneroException;
 import edu.curso.java.demo.Service.GeneroService;
-import edu.curso.java.demo.Service.PeliculaSerieException;
 import edu.curso.java.demo.bo.Genero;
-import edu.curso.java.demo.bo.PeliculaSerie;
 import edu.curso.java.demo.mvc.form.GeneroForm;
-import edu.curso.java.demo.mvc.form.PeliculaSerieForm;
+
 
 @Controller
 @RequestMapping("/generos")

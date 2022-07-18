@@ -25,11 +25,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import edu.curso.java.demo.Service.PeliculaSerieException;
 import edu.curso.java.demo.Service.PeliculaSerieService;
-import edu.curso.java.demo.Service.PersonajeException;
 import edu.curso.java.demo.bo.PeliculaSerie;
-import edu.curso.java.demo.bo.Personaje;
 import edu.curso.java.demo.mvc.form.PeliculaSerieForm;
-import edu.curso.java.demo.mvc.form.PersonajeForm;
 
 
 @Controller

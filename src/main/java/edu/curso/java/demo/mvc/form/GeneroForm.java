@@ -3,12 +3,16 @@ package edu.curso.java.demo.mvc.form;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import edu.curso.java.demo.bo.PeliculaSerie;
+import edu.curso.java.demo.enumeraciones.tituloGeneroEnumeracion;
 
 public class GeneroForm {
-	private String nombre;
+	@NotBlank
+	private tituloGeneroEnumeracion nombre;
 	private List<PeliculaSerie> PeliculasAsociadas = new ArrayList<PeliculaSerie>();
 	private Long idGenero;
 	private MultipartFile fotoGenero;
@@ -22,10 +26,10 @@ public class GeneroForm {
 	}
 	
 	
-	public String getNombre() {
+	public tituloGeneroEnumeracion getNombre() {
 		return nombre;
 	}
-	public void setNombre(String nombre) {
+	public void setNombre(tituloGeneroEnumeracion nombre) {
 		this.nombre = nombre;
 	}
 	public List<PeliculaSerie> getPeliculasAsociadas() {

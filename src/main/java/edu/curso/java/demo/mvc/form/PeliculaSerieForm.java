@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 import org.springframework.web.multipart.MultipartFile;
 
-import edu.curso.java.demo.bo.PeliculaSerie;
 import edu.curso.java.demo.bo.Personaje;
 
 public class PeliculaSerieForm {
 	private Long idPelicula;
+	@NotBlank
 	private String titulo;
 	private Date fechaCreacion;
+	@NotNull
 	private Long calificacion;
 	private List<Personaje> PersonajeAsociados=new ArrayList<Personaje>();
 	private MultipartFile fotoPeliculaSerie;

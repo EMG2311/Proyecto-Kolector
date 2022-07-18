@@ -28,7 +28,7 @@
 
 		<div class="form-group">
 			<label>Calificacion</label>
-			<form:input path="calificacion" cssClass="form-control required number" />
+			<form:input type="number" max="5" min="0" path="calificacion" cssClass="form-control required number" />
 			<form:errors path="calificacion" cssClass="error"/>
 		</div>
 

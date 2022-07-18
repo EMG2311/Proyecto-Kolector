@@ -14,7 +14,7 @@
     <h5 class="card-title">${pelicula.titulo}</h5>
     <p class="card-text">calificacion: <fmt:formatNumber type="number" value="${pelicula.calificacion}" /> </p>   
      <p class="card-text">Fecha de creacion:<fmt:formatNumber type="date" value="${pelicula.fechaCreacion}" /> </p>
- 	<img src="/peliculas/recuperar-foto-personaje/${pelicula.idPelicula}">
+ 	<img src="/peliculas/recuperar-foto-peliculas/${pelicula.idPelicula}">
   </div>
 </div>
 

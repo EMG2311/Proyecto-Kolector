@@ -5,14 +5,15 @@ import java.util.List;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 import edu.curso.java.demo.bo.PeliculaSerie;
 import edu.curso.java.demo.bo.Personaje;
 
 public class PeliculaSerieDTO {
-	@Id
-	@GeneratedValue
+
 	private Long idPelicula;
+	@NotBlank
 	private String titulo;
 	private Date fechaCreacion;
 	private Long calificacion;

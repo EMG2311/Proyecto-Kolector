@@ -3,7 +3,7 @@ package edu.curso.java.demo.bo;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.DiscriminatorValue;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,7 +16,7 @@ public class Genero {
 	@Id
 	@GeneratedValue
 	private Long idGenero;
-	private String nombre;
+	private tituloGeneroEnumeracion nombre;
 	
 	@OneToMany
 	private List<PeliculaSerie> peliculasAsociadas = new ArrayList<PeliculaSerie>();
@@ -27,7 +27,7 @@ public class Genero {
 		
 	}
 	
-	public Genero(Long idGenero, String nombre, List<PeliculaSerie> peliculasAsociada) {
+	public Genero(Long idGenero, tituloGeneroEnumeracion nombre, List<PeliculaSerie> peliculasAsociada) {
 		super();
 		this.idGenero = idGenero;
 		this.nombre = nombre;
@@ -40,10 +40,10 @@ public class Genero {
 	public void setIdGenero(Long idGenero) {
 		this.idGenero = idGenero;
 	}
-	public String getNombre() {
+	public tituloGeneroEnumeracion getNombre() {
 		return nombre;
 	}
-	public void setNombre(String nombre) {
+	public void setNombre(tituloGeneroEnumeracion nombre) {
 		this.nombre = nombre;
 	}
 	public List<PeliculaSerie> getPeliculasAsociadas() {

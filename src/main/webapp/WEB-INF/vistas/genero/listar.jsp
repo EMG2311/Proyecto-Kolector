@@ -6,14 +6,14 @@
 
 <jsp:include page="/WEB-INF/vistas/template_superior.jsp"></jsp:include>
 
-<h1>Listado de peliculas</h1>
+<h1>Listado de Genero</h1>
 
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.btn-borrar').on('click', function(event) {
 			event.preventDefault();
 			var hrefOriginal = $(this).attr('href');
-			bootbox.confirm("Borramos  la pelicula?", function(result){ 
+			bootbox.confirm("Borramos  la Genero?", function(result){ 
 				if(result) {
 					window.location = hrefOriginal;
 				}
@@ -27,19 +27,17 @@
 		<tr>
 			<th>Id</th>
 			<th>Nombre</th>
-			<th>peso</th>
 			<th></th>
 		</tr>
 	</thead>
-	<c:forEach items="${personajes}" var="p">
+	<c:forEach items="${genero}" var="p">
 		<tr>
-			<td>${p.id}</td>
+			<td>${p.idGenero}</td>
 			<td>${p.nombre}</td>
-			<td>${p.peso}</td>
 			<td>
-				<a href="/personajes/${p.id}" class="btn btn-primary">Ver</a>&nbsp;
-				<a href="/personajes/${p.id}/editar" class="btn btn-success">Editar</a>&nbsp;
-				<a href="/personajes/${p.id}/borrar" class="btn btn-danger btn-borrar">Borrar</a></td>
+				<a href="/generos/${p.idGenero}" class="btn btn-primary">Ver</a>&nbsp;
+				<a href="/generos/${p.idGenero}" class="btn btn-success">Editar</a>&nbsp;
+				<a href="/generos/${p.idGenero}" class="btn btn-danger btn-borrar">Borrar</a></td>
 		</tr>
 	</c:forEach>
 </table>

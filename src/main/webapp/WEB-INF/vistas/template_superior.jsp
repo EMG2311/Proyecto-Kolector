@@ -48,7 +48,7 @@
 	          <a class="nav-link" href="<c:url value="/generos"/>">Listado de Generos</a>
 	        </li>
 	       	<li class="nav-item">
-	          <a class="nav-link" href="<c:url value="/peliculas/nuevo"/>">Nuevo genero</a>
+	          <a class="nav-link" href="<c:url value="/generos/nuevo"/>">Nuevo genero</a>
 	        </li>
 	      </ul>
 	      <form class="form-inline mt-2 mt-md-0">

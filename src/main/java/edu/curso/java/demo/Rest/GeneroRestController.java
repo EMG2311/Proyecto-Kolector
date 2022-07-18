@@ -16,22 +16,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import edu.curso.java.demo.Rest.dto.GeneroDTO;
-import edu.curso.java.demo.Rest.dto.PeliculaSerieDTO;
 import edu.curso.java.demo.Service.GeneroException;
 import edu.curso.java.demo.Service.GeneroService;
-import edu.curso.java.demo.Service.PeliculaSerieException;
 import edu.curso.java.demo.bo.Genero;
-import edu.curso.java.demo.bo.PeliculaSerie;
+
 
 @RestController
 @RequestMapping("/api")
 public class GeneroRestController {
-	private static  Logger log = LoggerFactory.getLogger(PeliculaSerieRestController.class);
+	private static  Logger log = LoggerFactory.getLogger(GeneroRestController.class);
 	private GeneroService generoService;
 	
 	
