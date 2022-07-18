@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,7 +25,6 @@ public class GeneroServiceImpl implements GeneroService{
 	}
 
 	@Override
-	@Transactional
 	public void actualizarGenero(Genero genero) {
 
 			if(genero!=null) {
@@ -39,7 +37,6 @@ public class GeneroServiceImpl implements GeneroService{
 	}
 
 	@Override
-	@Transactional
 	public void borrarGeneroporId(Long id) {
         Optional<Genero> respuesta = generoRepository.findById(id);
         if (respuesta.isPresent()) {
@@ -53,13 +50,11 @@ public class GeneroServiceImpl implements GeneroService{
 	
 
 	@Override
-	@Transactional
 	public List<Genero> recuperarGenero() {
 		return generoRepository.findAll();
 	}
 
 	@Override
-	@Transactional
 	public Genero buscarGeneroPorId(Long id) {
         Optional<Genero> respuesta = generoRepository.findById(id);
         if (respuesta.isPresent()) {

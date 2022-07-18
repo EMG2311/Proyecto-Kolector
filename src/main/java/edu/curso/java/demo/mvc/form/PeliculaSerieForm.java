@@ -1,25 +1,27 @@
 package edu.curso.java.demo.mvc.form;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
 import edu.curso.java.demo.bo.PeliculaSerie;
+import edu.curso.java.demo.bo.Personaje;
 
 public class PeliculaSerieForm {
 	private Long idPelicula;
 	private String titulo;
 	private Date fechaCreacion;
 	private Long calificacion;
-	private List<PeliculaSerie> PersonajeAsociados;
+	private List<Personaje> PersonajeAsociados=new ArrayList<Personaje>();
 	private MultipartFile fotoPeliculaSerie;
 	
 	
-	public MultipartFile getFoto() {
+	public MultipartFile getFotoPeliculaSerie() {
 		return fotoPeliculaSerie;
 	}
-	public void setFoto(MultipartFile fotoPeliculaSerie) {
+	public void setFotoPeliculaSerie(MultipartFile fotoPeliculaSerie) {
 		this.fotoPeliculaSerie = fotoPeliculaSerie;
 	}
 	public Long getIdPelicula() {
@@ -46,10 +48,10 @@ public class PeliculaSerieForm {
 	public void setCalificacion(Long calificacion) {
 		this.calificacion = calificacion;
 	}
-	public List<PeliculaSerie> getPersonajeAsociados() {
+	public List<Personaje> getPersonajeAsociados() {
 		return PersonajeAsociados;
 	}
-	public void setPersonajeAsociados(List<PeliculaSerie> personajeAsociados) {
+	public void setPersonajeAsociados(List<Personaje> personajeAsociados) {
 		PersonajeAsociados = personajeAsociados;
 	}
 }

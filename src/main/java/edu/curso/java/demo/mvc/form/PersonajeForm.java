@@ -1,6 +1,7 @@
 package edu.curso.java.demo.mvc.form;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.constraints.NotBlank;
@@ -28,7 +29,7 @@ public class PersonajeForm {
 	@NotNull
 	private String Historia;
 	@NotNull
-	private List<PeliculaSerie> peliculasAsociadas;	
+	private List<PeliculaSerie> peliculasAsociadas = new ArrayList<PeliculaSerie>();	
 	
 	private MultipartFile fotoPersonaje;
 		

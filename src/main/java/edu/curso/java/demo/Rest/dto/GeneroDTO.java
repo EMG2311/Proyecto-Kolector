@@ -1,37 +1,35 @@
-package edu.curso.java.demo.bo;
+package edu.curso.java.demo.Rest.dto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotBlank;
 
+import edu.curso.java.demo.bo.Genero;
+import edu.curso.java.demo.bo.PeliculaSerie;
 import edu.curso.java.demo.enumeraciones.tituloGeneroEnumeracion;
 
-@Entity
-public class Genero {
-	@Id
-	@GeneratedValue
+public class GeneroDTO {
 	private Long idGenero;
-	private String nombre;
 	
-	@OneToMany
+
+	private String nombre;
 	private List<PeliculaSerie> peliculasAsociadas = new ArrayList<PeliculaSerie>();
 	
 	
 	
-	public Genero() {
+	public GeneroDTO() {
 		
 	}
 	
-	public Genero(Long idGenero, String nombre, List<PeliculaSerie> peliculasAsociada) {
+	public GeneroDTO(Genero genero) {
 		super();
-		this.idGenero = idGenero;
-		this.nombre = nombre;
-		this.peliculasAsociadas = peliculasAsociada;
+		this.idGenero = genero.getIdGenero();
+		this.nombre = genero.getNombre();
+		this.peliculasAsociadas = genero.getPeliculasAsociadas();
 	}
 
 	public Long getIdGenero() {
@@ -53,5 +51,4 @@ public class Genero {
 		this.peliculasAsociadas = peliculasAsociadas;
 	}
 	
-
 }

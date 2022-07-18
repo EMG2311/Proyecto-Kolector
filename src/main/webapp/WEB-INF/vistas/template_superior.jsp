@@ -19,42 +19,11 @@
 	<link href="<c:url value="/css/select2.min.css"/>" rel="stylesheet" >
 	<link href="<c:url value="/css/general.css"/>" rel="stylesheet" >
 	
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#select-autocomplete-personaje').select2({ 
-				width: '300px',
-				placeholder: 'Buscador ajax',
-				minimumInputLength: 2,
-				ajax: {
-				    url: '/api/personajes/buscar',
-				    data: function (params) {
-				        var query = {
-				          nombre: params.term
-				        };
-				        return query;
-				    },
-				    processResults: function (data) {
-				        var nuevosDatos = [];
-				    	
-				        for(var personaje of data) {
-				        	nuevosDatos.push({ id: personaje.id, text: personaje.nombre + ' ' + personaje.edad });
-				        }
-				        
-				    	return {
-				          results: nuevosDatos
-				        };
-				    },
-				    dataType: 'json'
-				}
-			}).on('select2:select', function(event) {
-				window.location = '/personajes/' + event.params.data.id;
-			});
-		});
-	</script>
+	
 </head>
 <body>
 
-	<header>
+<header>
 	  <!-- Fixed navbar -->
 	  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 	    <a class="navbar-brand" href="<c:url value="/personajes"/>">Ejemplo Spring</a>
@@ -64,10 +33,22 @@
 	    <div class="collapse navbar-collapse" id="navbarCollapse">
 	      <ul class="navbar-nav mr-auto">
 	        <li class="nav-item">
-	          <a class="nav-link" href="<c:url value="/personajes"/>">Listado</a>
+	          <a class="nav-link" href="<c:url value="/personajes"/>">Listado de personajes</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="<c:url value="/personajes/nuevo"/>">Nuevo</a>
+	          <a class="nav-link" href="<c:url value="/personajes/nuevo"/>">Nuevo personaje</a>
+	        </li>
+	       	<li class="nav-item">
+	          <a class="nav-link" href="<c:url value="/peliculas"/>">Listado de peliculas</a>
+	        </li>
+	       	<li class="nav-item">
+	          <a class="nav-link" href="<c:url value="/peliculas/nuevo"/>">nueva pelicula</a>
+	        </li>
+	       	<li class="nav-item">
+	          <a class="nav-link" href="<c:url value="/generos"/>">Listado de Generos</a>
+	        </li>
+	       	<li class="nav-item">
+	          <a class="nav-link" href="<c:url value="/peliculas/nuevo"/>">Nuevo genero</a>
 	        </li>
 	      </ul>
 	      <form class="form-inline mt-2 mt-md-0">
@@ -76,7 +57,8 @@
 	    </div>
 	  </nav>
 	</header>
-
-
-	<div class="container">
+		<div class="container">
 	<!-- INICIO CONTENIDO -->
+	
+
+

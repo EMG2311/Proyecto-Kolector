@@ -16,7 +16,7 @@ public class PeliculaSerieDTO {
 	private String titulo;
 	private Date fechaCreacion;
 	private Long calificacion;
-	//private List<Personaje> PersonajeAsociados;
+	private List<Personaje> PersonajeAsociados;
 	
 	public PeliculaSerieDTO(){
 	}
@@ -25,7 +25,7 @@ public class PeliculaSerieDTO {
 		this.calificacion=pelicula.getCalificacion();
 		this.fechaCreacion=pelicula.getFechaCreacion();
 		this.idPelicula=pelicula.getIdPelicula();
-		//this.PersonajeAsociados=pelicula.getPersonajeAsociados();
+		this.PersonajeAsociados=pelicula.getPersonajeAsociados();
 		this.titulo=pelicula.getTitulo();
 	}
 	}
@@ -53,11 +53,11 @@ public class PeliculaSerieDTO {
 	public void setCalificacion(Long calificacion) {
 		this.calificacion = calificacion;
 	}
-	/*
+	
 	public List<Personaje> getPersonajeAsociados() {
 		return PersonajeAsociados;
 	}
 	public void setPersonajeAsociados(List<Personaje> personajeAsociados) {
 		PersonajeAsociados = personajeAsociados;
-	}*/
+	}
 }

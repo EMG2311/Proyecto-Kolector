@@ -15,8 +15,8 @@ public interface PeliculaSerieRepository extends JpaRepository<PeliculaSerie, Lo
 	
     @Query("SELECT p FROM PeliculaSerie p WHERE p.titulo LIKE :nombre")
     public List<PeliculaSerie> buscarPorNombre(@Param("nombre") String nombre);
-    
 
+    
     @Query("SELECT p FROM PeliculaSerie p ORDER BY p.titulo ASC")
     public List<PeliculaSerie> ordenAscendente();
 

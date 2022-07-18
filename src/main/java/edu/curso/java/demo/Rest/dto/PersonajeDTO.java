@@ -17,9 +17,9 @@ public class PersonajeDTO {
 	public PersonajeDTO(Personaje personaje) {
 		this.idPersonaje=personaje.getId();
 		this.edad=personaje.getEdad();
-		this.Historia=personaje.getHistoria();
+		this.historia=personaje.getHistoria();
 		this.nombre=personaje.getNombre();
-		//this.peliculasAsociadas=personaje.getPeliculasAsociadas();
+		this.peliculasAsociadas=personaje.getPeliculasAsociadas();
 		this.peso=personaje.getPeso();
 	}
 	public String getNombre() {
@@ -41,17 +41,17 @@ public class PersonajeDTO {
 		this.peso = peso;
 	}
 	public String getHistoria() {
-		return Historia;
+		return historia;
 	}
 	public void setHistoria(String historia) {
-		Historia = historia;
+		this.historia = historia;
 	}
-	/*public List<PeliculaSerie> getPeliculasAsociadas() {
+	public List<PeliculaSerie> getPeliculasAsociadas() {
 		return peliculasAsociadas;
 	}
 	public void setPeliculasAsociadas(List<PeliculaSerie> peliculasAsociadas) {
 		this.peliculasAsociadas = peliculasAsociadas;
-	}*/
+	}
 
 	private Long idPersonaje;
 	public Long getId() {
@@ -68,6 +68,6 @@ public class PersonajeDTO {
 	private Long edad;
 	@Positive
 	private Long peso;
-	private String Historia;
-	//private List<PeliculaSerie> peliculasAsociadas;
+	private String historia;
+	private List<PeliculaSerie> peliculasAsociadas;
 }

@@ -20,14 +20,13 @@ public class PeliculaSerie {
 	public PeliculaSerie() {
 		
 	}
-	public PeliculaSerie(Long idPelicula, String titulo, Date fechaCreacion, Long calificacion
-			) {
+	public PeliculaSerie(Long idPelicula, String titulo, Date fechaCreacion, Long calificacion,List<Personaje> personajeAsociados) {
 		super();
 		this.idPelicula = idPelicula;
 		this.titulo = titulo;
 		this.fechaCreacion = fechaCreacion;
 		this.calificacion = calificacion;
-		//this.personajeAsociados = personajeAsociados;
+		this.personajeAsociados = personajeAsociados;
 	}
 	public Long getIdPelicula() {
 		return idPelicula;
@@ -53,12 +52,12 @@ public class PeliculaSerie {
 	public void setCalificacion(Long calificacion) {
 		this.calificacion = calificacion;
 	}
-	/*public List<Personaje> getPersonajeAsociados() {
+	public List<Personaje> getPersonajeAsociados() {
 		return personajeAsociados;
 	}
 	public void setPersonajeAsociados(List<Personaje> personajeAsociados) {
 		this.personajeAsociados = personajeAsociados;
-	}*/
+	}
 	@Id
 	@GeneratedValue
 	private Long idPelicula;
@@ -66,7 +65,7 @@ public class PeliculaSerie {
 	private Date fechaCreacion;
 	private Long calificacion;
 	
-	
-	//private List<Personaje> personajeAsociados = new ArrayList<Personaje>();
+	@ManyToMany
+	private List<Personaje> personajeAsociados = new ArrayList<Personaje>();
 	
 }

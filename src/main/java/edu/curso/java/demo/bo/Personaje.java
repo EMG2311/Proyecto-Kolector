@@ -24,7 +24,8 @@ public class Personaje {
 	private Long peso;
 	private String historia;
 	
-	//private List<PeliculaSerie> peliculasAsociadas = new ArrayList<PeliculaSerie>();
+	@ManyToMany @Column(nullable = true)
+	private List<PeliculaSerie> peliculasAsociadas = new ArrayList<PeliculaSerie>();
 	
 	
 	public String getNombre() {
@@ -51,12 +52,12 @@ public class Personaje {
 	public void setHistoria(String historia) {
 		this.historia = historia;
 	}
-	/*public List<PeliculaSerie> getPeliculasAsociadas() {
+	public List<PeliculaSerie> getPeliculasAsociadas() {
 		return peliculasAsociadas;
 	}
 	public void setPeliculasAsociadas(List<PeliculaSerie> peliculasAsociadas) {
 		this.peliculasAsociadas = peliculasAsociadas;
-	*/
+	}
 
 	public Long getId() {
 		return idPersonaje;
@@ -65,12 +66,7 @@ public class Personaje {
 		this.idPersonaje = idPersonaje;
 	}
 
-	public Long getIdPersonaje() {
-		return idPersonaje;
-	}
-	public void setIdPersonaje(Long idPersonaje) {
-		this.idPersonaje = idPersonaje;
-	}
+
 
 	
 }

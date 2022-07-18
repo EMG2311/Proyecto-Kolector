@@ -76,7 +76,7 @@ public class PersonajeRestController {
 		personaje.setNombre(personajeDTO.getNombre());
 		personaje.setEdad(personajeDTO.getEdad());
 		personaje.setHistoria(personajeDTO.getHistoria());
-		//personaje.setPeliculasAsociadas(personajeDTO.getPeliculasAsociadas());
+		personaje.setPeliculasAsociadas(personajeDTO.getPeliculasAsociadas());
 		personaje.setPeso(personajeDTO.getPeso());
 		Long idGenerado;
 		try {

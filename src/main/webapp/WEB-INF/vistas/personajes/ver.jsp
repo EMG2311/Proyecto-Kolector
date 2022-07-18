@@ -5,8 +5,7 @@
     pageEncoding="ISO-8859-1"%>
 
 
-<jsp:include page="/WEB-INF/vistas/template_superior.jsp"></jsp:include>
-
+	<jsp:include page="/WEB-INF/vistas/template_superior.jsp"></jsp:include>
 
 <div class="card">
   <h5 class="card-header">Personaje id: ${personaje.id}</h5>

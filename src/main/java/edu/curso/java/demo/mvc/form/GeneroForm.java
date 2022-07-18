@@ -1,5 +1,6 @@
 package edu.curso.java.demo.mvc.form;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -8,7 +9,7 @@ import edu.curso.java.demo.bo.PeliculaSerie;
 
 public class GeneroForm {
 	private String nombre;
-	private List<PeliculaSerie> PeliculasAsociadas;
+	private List<PeliculaSerie> PeliculasAsociadas = new ArrayList<PeliculaSerie>();
 	private Long idGenero;
 	private MultipartFile fotoGenero;
 	

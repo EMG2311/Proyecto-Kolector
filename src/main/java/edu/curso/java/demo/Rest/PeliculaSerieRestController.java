@@ -43,8 +43,6 @@ public class PeliculaSerieRestController {
 	
 	@Autowired
 	private PeliculaSerieService peliculaSerieService;
-	@Autowired
-	private PersonajeService personajeService;
 	
 	
 	@GetMapping("/peliculas/buscar")
@@ -79,14 +77,14 @@ public class PeliculaSerieRestController {
 		return ResponseEntity.ok(peliculaDTO);
 	}
 	
-	
+		
 	@PostMapping("/peliculas")
 	public ResponseEntity<PeliculaSerieDTO> altaDeNuevoPersonaje(@Valid @RequestBody PeliculaSerieDTO peliculaSerieDTO) {
 		PeliculaSerie pelicula = new PeliculaSerie();
 		pelicula.setTitulo(peliculaSerieDTO.getTitulo());
 		pelicula.setCalificacion(peliculaSerieDTO.getCalificacion());
 		pelicula.setFechaCreacion(peliculaSerieDTO.getFechaCreacion());
-		//pelicula.setPersonajeAsociados(peliculaSerieDTO.getPersonajeAsociados());
+		pelicula.setPersonajeAsociados(peliculaSerieDTO.getPersonajeAsociados());
 		
 		Long idGenerado;
 		try {
@@ -105,7 +103,7 @@ public class PeliculaSerieRestController {
 		PeliculaSerie pelicula =peliculaSerieService.buscarPeliculaSeriePorId(id);
 		pelicula.setCalificacion(peliculaDTO.getCalificacion());
 		pelicula.setFechaCreacion(peliculaDTO.getFechaCreacion());
-		//pelicula.setPersonajeAsociados(peliculaDTO.getPersonajeAsociados());
+		pelicula.setPersonajeAsociados(peliculaDTO.getPersonajeAsociados());
 		pelicula.setTitulo(peliculaDTO.getTitulo());
 		
 		peliculaSerieService.actualizarPeliculaSerie(pelicula);

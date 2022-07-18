@@ -73,7 +73,7 @@ public class PersonajeController {
 		personajeForm.setNombre(personaje.getNombre());
 		personajeForm.setEdad(personaje.getEdad());
 		personajeForm.setHistoria(personaje.getHistoria());
-		//personajeForm.setPeliculasAsociadas(personaje.getPeliculasAsociadas());
+		personajeForm.setPeliculasAsociadas(personaje.getPeliculasAsociadas());
 		personaje.setPeso(personaje.getPeso());
 		
 	
@@ -103,7 +103,7 @@ public class PersonajeController {
 		personaje.setNombre(personajeForm.getNombre());
 		personaje.setEdad(personajeForm.getEdad());
 		personaje.setHistoria(personajeForm.getHistoria());
-		//personaje.setPeliculasAsociadas(personajeForm.getPeliculasAsociadas());
+		personaje.setPeliculasAsociadas(personajeForm.getPeliculasAsociadas());
 		personaje.setPeso(personajeForm.getPeso());
 
 		
@@ -137,8 +137,8 @@ public class PersonajeController {
 		return "redirect:/personajes";
 	}
 	
-	@GetMapping(value = "/recuperar-foto/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
-	public @ResponseBody byte[] recuperarFotoProducto(@PathVariable Long id) {
+	@GetMapping(value = "/recuperar-foto-personaje/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public @ResponseBody byte[] recuperarFotoPersonaje(@PathVariable Long id) {
 		
 		Personaje personaje = personajeService.buscarPersonajePorId(id);
 
