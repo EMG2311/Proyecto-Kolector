@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,7 +21,8 @@ public class PersonajeServiceImpl implements PersonajeService{
 	
 	
 	@Override
-	public Long guardarNuevoPersonaje(Personaje personaje) {
+	@PreAuthorize("hasRole('ADMIN')")
+	public Long guardarNuevoPersonaje(Personaje personaje) throws PersonajeException {
 
 		personajeRepository.save(personaje);
 		return personaje.getId();

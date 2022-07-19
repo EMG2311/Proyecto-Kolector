@@ -39,7 +39,7 @@
 		</div>
 		<div class="form-group">
 			<label>Peliculas asociadas</label>
-			<form:input path="peliculasAsociadas" cssClass="form-control required" />
+			<form:input  path="peliculasAsociadas" cssClass="form-control required" />
 			<form:errors path="peliculasAsociadas" cssClass="error"/>
 		</div>
 		<div class="form-group">

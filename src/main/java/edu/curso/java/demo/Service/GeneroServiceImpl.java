@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,8 +19,10 @@ public class GeneroServiceImpl implements GeneroService{
 
 	@Autowired
 	private GeneroRepository generoRepository; 
+	
+	@PreAuthorize("hasRole('ADMIN')")
 	@Override
-	public Long guardarNuevoGenero(Genero genero) {
+	public Long guardarNuevoGenero(Genero genero)throws GeneroException {
 		generoRepository.save(genero);
 		return genero.getIdGenero();
 	}

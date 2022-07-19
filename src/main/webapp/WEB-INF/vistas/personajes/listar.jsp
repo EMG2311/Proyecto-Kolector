@@ -36,7 +36,8 @@
 		<tr>
 			<td>${p.id}</td>
 			<td>${p.nombre}</td>
-			<td>${p.peso} Kg</td>
+			<td>${p.peso} Kg
+			</td>
 			<td>${p.edad} Años</td>
 			<td>
 				<a href="/personajes/${p.id}" class="btn btn-primary">Ver</a>&nbsp;
