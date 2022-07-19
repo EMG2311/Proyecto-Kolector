@@ -27,7 +27,8 @@
 		<tr>
 			<th>Id</th>
 			<th>Nombre</th>
-			<th>peso</th>
+			<th>Peso</th>
+			<th>Edad</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -35,7 +36,8 @@
 		<tr>
 			<td>${p.id}</td>
 			<td>${p.nombre}</td>
-			<td>${p.peso}</td>
+			<td>${p.peso} Kg</td>
+			<td>${p.edad} Años</td>
 			<td>
 				<a href="/personajes/${p.id}" class="btn btn-primary">Ver</a>&nbsp;
 				<a href="/personajes/${p.id}/editar" class="btn btn-success">Editar</a>&nbsp;
