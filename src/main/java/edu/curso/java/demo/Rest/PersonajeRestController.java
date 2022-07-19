@@ -89,33 +89,7 @@ public class PersonajeRestController {
 		}
 		return ResponseEntity.status(HttpStatus.CREATED).body(personajeDTO);
 	}
-	/*
-	@PostMapping("/personajes")
-	public ResponseEntity<List<PersonajeDTO>> altaDeNuevoPersonaje(@Valid @RequestBody List<PersonajeDTO> personajeDTO) {
-		List<Personaje> personaje = new ArrayList<Personaje>();
-		for(PersonajeDTO p: personajeDTO)
-		{
-		Personaje o= new Personaje();
-		o.setNombre(p.getNombre());
-		o.setEdad(p.getEdad());
-		o.setHistoria(p.getHistoria());
-		o.setPeliculasAsociadas(p.getPeliculasAsociadas());
-		o.setPeso(p.getPeso());
-		Long idGenerado;
-		try {
-			idGenerado = personajeService.guardarNuevoPersonaje(o);
-			p.setId(idGenerado);
-			personaje.add(o);
 
-		} catch (PersonajeException e) {
-			log.error("Error al dar de alta nuevo personaje", e);
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
-		}
-		}
-		return ResponseEntity.status(HttpStatus.CREATED).body(personajeDTO);
-		
-		
-	}*/
 	
 	@PutMapping("/personajes/{id}")
 	public void actualizarPersonajePorId(@PathVariable Long id, @Valid @RequestBody PersonajeDTO personajeDTO) {

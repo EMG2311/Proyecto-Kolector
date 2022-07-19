@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,6 +30,7 @@ import edu.curso.java.demo.bo.Genero;
 @RequestMapping("/api")
 public class GeneroRestController {
 	private static  Logger log = LoggerFactory.getLogger(GeneroRestController.class);
+	@Autowired
 	private GeneroService generoService;
 	
 	

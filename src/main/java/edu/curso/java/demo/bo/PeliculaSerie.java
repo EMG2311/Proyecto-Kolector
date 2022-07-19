@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -65,7 +65,7 @@ public class PeliculaSerie {
 	private Date fechaCreacion;
 	private Long calificacion;
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Personaje> personajeAsociados = new ArrayList<Personaje>();
 	
 }
